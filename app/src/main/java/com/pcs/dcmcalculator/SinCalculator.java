@@ -55,7 +55,7 @@ public class SinCalculator extends AppCompatActivity {
         double valMinute = getDoubleVal(edtMinute.getText().toString());
         double valSecond = getDoubleVal(edtSecond.getText().toString());
 
-        double radianVal = (Math.PI * (valDegree + (valMinute / 60) + (valSecond / 1800))) / 180;
+        double radianVal = (Math.PI * (valDegree + (valMinute / 60) + (valSecond / 3600))) / 180;
         double height = Math.sin(radianVal) * valLength;
 
         edtHeight.setText(String.valueOf(height));

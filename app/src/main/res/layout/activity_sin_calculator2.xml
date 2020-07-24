@@ -8,6 +8,7 @@
     tools:context=".SinCalculator">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -78,9 +79,9 @@
                     style="@style/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:digits="0123456789"
                     android:ems="10"
                     android:gravity="center_horizontal"
-                    android:digits="0123456789"
                     android:inputType="number"
                     android:text="Degree" />
             </LinearLayout>
@@ -173,4 +174,15 @@
             android:text="Calculate Height" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.1"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/logo_main" />
 </androidx.constraintlayout.widget.ConstraintLayout>

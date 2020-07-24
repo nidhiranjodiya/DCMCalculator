@@ -74,7 +74,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void findValues() {
+        DecimalFormat df = new DecimalFormat("0.000");
+        df.setRoundingMode(RoundingMode.CEILING);
+
         String input = edtSize.getText().toString();
+        input = df.format(Double.parseDouble(input));
+
         txtValue.setText("");
         result = new ArrayList<Double>();
         //Calculate result for after decimal values
@@ -84,8 +89,7 @@ public class MainActivity extends AppCompatActivity {
         double decimal_temp = decimal;
         double total = 0;
 
-        DecimalFormat df = new DecimalFormat("#.###");
-        df.setRoundingMode(RoundingMode.CEILING);
+
 
         //Calculate after decimal
         for (double x : Util.values_dec) {
@@ -116,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     //Printing to TextView
     void printResult() {
         String textOutput = "";
-//        Collections.sort(result);
+        Collections.sort(result);
 
         for (double x : result) {
             textOutput += String.format("%.03f" , x);
