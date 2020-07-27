@@ -4,10 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         //Code Starts
         edtSize = findViewById(R.id.edtSize);
         txtValue = findViewById(R.id.txtResult);
-        btnGo = findViewById(R.id.btnGo);
+        btnGo = findViewById(R.id.btnCal);
         edtSize.requestFocus();
 
         //Set keyboard "Go" or "Done" button click
